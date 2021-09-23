@@ -10,13 +10,13 @@ public class Main {
         int random = 0;
         int game = 0;
 
-        while(game <= 10){
-            random = 1 + (int)(Math.random() * ((5 - 1) + 1));
+        while(game < 10){
+            random = 1 + (int)(Math.random() * ((7 - 1) + 1));
             System.out.println("Players to be added: [" + random + "]");
             System.out.println();
 
             //Character creation:
-            for(int i = 0; i == random; i++){
+            for(int i = 0; i <= random; i++){
                 System.out.println("==========[NEW PLAYER ADDED]==========");
                 int id = 1000000 + (int)(Math.random() * ((9999999 - 1000000) + 1000000));
                 int level = 1 + (int)(Math.random() * ((100 - 1) + 1));
@@ -24,6 +24,7 @@ public class Main {
             }
 
             //Print the queue:
+            System.out.println();
             System.out.println("TOTAL PLAYERS: [" + queue.size() + "]");
             queue.printQueue();
 
