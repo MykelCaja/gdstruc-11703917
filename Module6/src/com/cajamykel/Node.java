@@ -52,13 +52,13 @@ public class Node {
 
     public void traverseInOrderDescending(){
         if(rightChild != null){
-            rightChild.traverseInOrder();
+            rightChild.traverseInOrderDescending();
         }
 
         System.out.println("Data: " + data);
 
         if(leftChild != null){
-            leftChild.traverseInOrder();
+            leftChild.traverseInOrderDescending();
         }
     }
 
