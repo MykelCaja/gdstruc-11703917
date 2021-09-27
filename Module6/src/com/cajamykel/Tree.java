@@ -1,7 +1,7 @@
 package com.cajamykel;
 
 public class Tree {
-    public Node root;
+    private Node root;
 
     public void insert(int value){
         if(root == null){
@@ -19,6 +19,12 @@ public class Tree {
         }
     }
 
+    public void traverseInOrderDescending(){
+        if(root != null){
+            root.traverseInOrderDescending();
+        }
+    }
+
     public Node get(int value){
         if (root != null){
             return root.get(value);
@@ -28,18 +34,20 @@ public class Tree {
 
     //Keep digging until null is reached.
     public Node getMin(){
-        Node current;
-        while(root.getLeftChild() != null){
-            current = root.getLeftChild();
+        Node current = root;
+        while(current.getLeftChild() != null){
+            current = current.getLeftChild();
         }
+        System.out.println("[LARGEST VALUE: " + current);
         return current;
     }
 
     public Node getMax(){
-        Node current;
+        Node current = root;
         while(current.getRightChild() != null){
             current = current.getRightChild();
         }
+        System.out.println("[LARGEST VALUE: " + current);
         return current;
     }
 }

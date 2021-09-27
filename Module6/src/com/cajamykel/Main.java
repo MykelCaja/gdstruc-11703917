@@ -15,6 +15,8 @@ public class Main {
     tree.insert(55);
 
     tree.traverseInOrder();
-
+    tree.getMax();
+    tree.getMin();
+    tree.traverseInOrderDescending();
     }
 }

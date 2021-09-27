@@ -50,6 +50,18 @@ public class Node {
         }
     }
 
+    public void traverseInOrderDescending(){
+        if(rightChild != null){
+            rightChild.traverseInOrder();
+        }
+
+        System.out.println("Data: " + data);
+
+        if(leftChild != null){
+            leftChild.traverseInOrder();
+        }
+    }
+
     //Get Node
     public Node get(int value){
         if(value == data){
